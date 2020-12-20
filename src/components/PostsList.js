@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 
 const PostsList = () => {
   const [initialState, stateChanger] = useState([]);
-
+  const API = "https://api.dtf.ru/v/timeline/gamedev/recent";
   useEffect(() => {
-    fetch(`https://api.dtf.ru/v/timeline/gamedev/recent`)
+    fetch(API)
       .then((response) => response.json())
       .then((data) => stateChanger({ data }));
   }, [stateChanger]);
