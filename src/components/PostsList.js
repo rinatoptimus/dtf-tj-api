@@ -11,7 +11,7 @@ const PostsList = () => {
 
   const ListOfItems = (props) => {
     const { myData } = props;
-    if (!myData || myData.length === 0) return <p>No repos!</p>;
+    if (!myData || myData.length === 0) return <p>Nothing to see here.</p>;
 
     return (
       <ul>

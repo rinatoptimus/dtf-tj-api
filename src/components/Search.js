@@ -12,7 +12,6 @@ export default function SearchPosts() {
       headers: { accept: "application/json" }
     });
     const postsData = await results.json();
-    console.log(results + " 0000");
     return postsData.results;
   };
 
@@ -45,7 +44,7 @@ export default function SearchPosts() {
     return (
       <ul>
         <li key={index}>{post.post}</li>
-        <PostComponents /> 1111
+        <PostComponents />
       </ul>
     );
   });
